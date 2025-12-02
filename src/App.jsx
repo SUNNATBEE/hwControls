@@ -1,8 +1,12 @@
+// src/App.jsx - O'ZGARMAS
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Outlet/>
+    </div>
   )
 }
 
