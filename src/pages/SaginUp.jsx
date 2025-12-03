@@ -20,7 +20,7 @@ const SignUp = () => {
     confirmPassword: "",
   });
 
-  // ✅ 1. Session bor bo'lsa Home ga o'tish
+  // Session bor bo'lsa Home ga o'tish
   useEffect(() => {
     const checkSession = () => {
       const sessionUser = sessionStorage.getItem("currentUser");
@@ -31,12 +31,11 @@ const SignUp = () => {
     
     checkSession();
     
-    // Har 100ms tekshirish
     const interval = setInterval(checkSession, 100);
     return () => clearInterval(interval);
   }, [navigate]);
 
-  // ✅ 2. User yaratilganda Home ga o'tish
+  // User yaratilganda Home ga o'tish
   useEffect(() => {
     if (user) {
       navigate("/home");
@@ -83,8 +82,8 @@ const SignUp = () => {
               name="name"
               placeholder="Full Name"
               value={formData.name}
-              onChange={(e) => setFormData({...formData, name: e.target.value})}
-              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500"
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500 text-black"
               required
             />
 
@@ -93,8 +92,8 @@ const SignUp = () => {
               name="email"
               placeholder="Email Address"
               value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500"
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500 text-black"
               required
             />
 
@@ -103,8 +102,8 @@ const SignUp = () => {
               name="password"
               placeholder="Password"
               value={formData.password}
-              onChange={(e) => setFormData({...formData, password: e.target.value})}
-              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500"
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500 text-black"
               required
             />
 
@@ -113,8 +112,8 @@ const SignUp = () => {
               name="confirmPassword"
               placeholder="Confirm Password"
               value={formData.confirmPassword}
-              onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
-              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500"
+              onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+              className="w-full border-b-2 border-gray-300 outline-none py-3 px-2 focus:border-blue-500 text-black"
               required
             />
 
